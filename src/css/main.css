@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather');
+
+html, body{
+  height: 100%;
+}
+
+body{
+  margin: 0;
+/*  background-image: url(forbidden_forest.jpg);
+  */background-repeat: no-repeat;
+  background-size: cover;
+  background-color: black;
+}
+
+main{
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+
+.menu-icone{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  transition: background-color .5s ease;
+}
+
+.menu-icone a{
+  width: 100%;
+}
+
+.menu-icone img{
+  //display: block;
+  //margin: 0 auto;
+  width: 30%;
+  transition: transform .5s ease;
+}
+
+.titulo{
+  color: white;
+  position: absolute;
+  bottom: 0;
+
+  width: 100%;
+  font-family: 'Merriweather', serif;
+  font-weight: normal;
+  font-size: 1.75em;
+
+  transition: opacity .5s ease;
+  opacity: 0;
+}
+
+.menu-icone:hover .titulo{
+  opacity: 1;
+}
+
+.menu-icone:hover{
+  background-color: rgba(255, 255, 255, 0.1)
+}
+
+.menu-icone:hover img{
+  transform: scale(1.15);
+}
+
+
+
+@media (max-width: 700px) {
+  main{
+    display: block;
+  }
+
+  .menu-icone{
+    height: calc(100% / 3);
+  }
+
+  .menu-icone img{
+    width: 20%;
+  }
+}
