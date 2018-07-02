@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather');
+
+html, body{
+  height: 100%;
+}
+
+body{
+  margin: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: black;
+}
+
+#seletor{
+  height: 100%;
+  width: 100%;
+  white-space: nowrap;
+  font-size: 0;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+
+.menu-icone{
+  width: calc(100%/3);
+  height: 100%;
+  font-size: 14px;
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+
+  box-sizing: border-box; 
+  overflow: hidden;
+
+  /* Para animação */
+  transition: left .5s;
+}
+
+/* Efeito de escurecer ao passar mouse por cima */
+.menu-icone::before{
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+  width: 100%;
+  height: 100%;
+  content: '';
+  
+  background-color: rgba(0,0,0, 25%);
+  opacity: 0;
+  transition: opacity .5s ease;
+}
+
+/* Efeito de escurece aparece caso mouse esteja em cima e 
+ * nenhuma informação esteja sendo mostrada no elemento
+ */
+.menu-icone:not(.ativo):hover::before{
+  opacity: 1;
+}
+
+/* Fundo de cada feitiço */
+.menu-icone .fundo{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index:  -1;
+  
+  transition: 1s ease;
+  filter: brightness(80%);
+  height: 100%;
+}
+
+/* Icone do feitiço posicionado quando não ativo*/
+.icone{
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  margin-top: -25%;
+  transition: 1s ease;
+}
+
+/* Imagem do icone do feitiço*/
+.icone img{
+  width: 30%;
+  transition: transform .5s ease;
+}
+
+/* Efeito de aumento de tamanho do icone caso o mouse esteja
+ * em cima e nenhuma informação esteja sendo mostrada no elemento
+ */
+.menu-icone:not(.ativo):hover .icone img{
+  transform: scale(1.15);
+}
+
+/* Titulo do feitiço*/
+.titulo{
+  color: white;
+  position: absolute;
+  top: 90%;
+
+  width: 100%;
+  font-family: 'Merriweather', serif;
+  font-weight: normal;
+  font-size: 1.75em;
+
+  transition: all 1s ease;
+  opacity: 0;
+}
+
+.menu-icone:hover .titulo{
+  opacity: 1;
+}
+
+/* Quando alguma informação esteja sendo mostrada... */
+
+.ativo .icone{
+  top: 5%;
+  margin-top: 0;
+}
+
+.ativo .titulo{
+  top: 0;
+  opacity: 1;
+  top: 25%;
+}
+
+.ativo .fundo{
+  top: -100%;
+}
+
+.ativo .informacao{
+  top: 35%;
+}
+
+.informacao{
+  background-color: white;
+  width: 100%;
+  height: 100%;
+
+  position: absolute;
+  top: 100%;
+  left: 0;
+
+  transition: top 1s ease;
+}
+
+.informacao::before{
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  content: '';
+  width: 2em;
+  height: 2em;
+  margin: 1em;
+  opacity: 0;
+  transition: 1s ease;
+
+
+  background-image: url(../icons/x.png);
+  background-size: cover;
+}
+
+.informacao:hover::before{
+  cursor: pointer;
+}
+
+.ativo .informacao::before{
+  opacity: 1;
+  top: -35%;
+}
+
+
+.INFundo{
+  position: absolute;
+  top: -35%;
+  left: 0;
+  z-index: -2;
+  transition: top 1s ease;
+  filter: brightness(75%);
+
+  
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+.seta{
+  position: fixed;
+  top: 50%;
+  margin-top: -2.5em;
+  z-index: 9999;
+
+  width: 2.5em;
+}
+
+#seta-direita img{
+  right: 0;
+}
+
+#seta-esquerda img{
+  transform: rotate(180deg);
+}
+
+@media (max-width: 700px) {
+  #seletor{
+    display: block;
+  }
+
+  .menu-icone{
+    width: 100%;
+  }
+
+  .icone img{
+    width: 20%;
+  }
+}
