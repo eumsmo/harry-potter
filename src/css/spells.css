@@ -1,3 +1,57 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather');
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC');
+
 #id1 .INFundo{
 	top: -50%;
+}
+
+#id5 .fundo{
+	left: -50%;
+}
+
+
+.informacao{
+	font-family: 'Merriweather', serif;
+}
+
+.informacao h1{
+	text-align: center;
+	margin-top: 0;
+	margin-bottom: 0;
+	font-size: 1.75em;
+	clear: both;
+}
+
+.informacao ul{
+	padding: 5%;
+	margin: 0;
+}
+
+.informacao li{
+	list-style: none;
+	clear: both;
+	margin-bottom: .5em;
+}
+
+.informacao li span{
+	float: right;
+}
+
+.informacao li b{
+	font-size: 1.2em;	
+}
+
+.citacao{
+	clear: both; 
+	text-align: center;
+	margin-bottom: 0;
+}
+
+.quem-citou{
+	text-align: right;
+	width: 75%;
+	float: right;
+	clear: right; 
+
+	margin-top: .5em;
 }
