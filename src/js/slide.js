@@ -6,7 +6,7 @@ function mostrar_inf(evt){
 		let feiticoEl = iconeEl.parentElement;
 		feiticoEl.classList.remove(CLASSE_INFORMACOES);
 	}
-	
+
 	let feiticoEl = evt.currentTarget.parentElement;
 	feiticoEl.classList.add(CLASSE_INFORMACOES);
 }
@@ -50,33 +50,36 @@ function definir_pos() {
 }
 
 function mover_inf(arg){
-	
+
 	if(window.innerWidth<=700){
 		definir_pos();
 		posicaoAtual+=arg;
-	} 
+	}
 	else {
-		setaDireita.href = '#id5';
-		setaEsquerda.href='#id0';
-		posicaoAtual=(posicaoAtual==0)? 1: 0;
-		if(posicaoAtual==0){
-			setaEsquerda.style.display = 'none';
-			setaDireita.style.display = '';
-		} else{
-			
-			setaDireita.style.display = 'none';
-			setaEsquerda.style.display = '';
+		if(posicaoMax>2){
+			setaDireita.href = '#id5';
+			setaEsquerda.href='#id0';
+			posicaoAtual=(posicaoAtual==0)? 1: 0;
+			if(posicaoAtual==0){
+				setaEsquerda.style.display = 'none';
+				setaDireita.style.display = '';
+			} else{
+
+				setaDireita.style.display = 'none';
+				setaEsquerda.style.display = '';
+			}
 		}
 
 	}
-}	
+}
 
 if(window.innerWidth<=700)
 	definir_pos();
-else{
+else if(posicaoMax>2){
 	setaDireita.href = '#id5';
 	setaEsquerda.href='#id0';
+} else{
+	setaDireita.style.display = setaEsquerda.style.display = 'none';
 }
 setaEsquerda.addEventListener("click",e=>mover_inf(-1));
 setaDireita.addEventListener("click",e=>mover_inf(1));
-
