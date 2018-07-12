@@ -299,5 +299,8 @@ body{
   left: 0;
   margin: 1em;
   z-index: 999999;
+}
+
+#voltar img{
   width: 70%;
 }
