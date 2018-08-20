@@ -1,0 +1,13 @@
+{
+	"short_name": "HP",
+	"name": "Harry Potter",
+	"icons": [
+	 {
+    	"src": "src/img/hallows-icon.png",
+    	"type": "image/png",
+    	"sizes": "256x256"
+  	}],
+  	"start_url": "index.html",
+  	"background_color": "black",
+  	"display": "standalone"
+}
