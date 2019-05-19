@@ -78,6 +78,7 @@ if(window.innerWidth<=700)
 else if(posicaoMax>2){
 	setaDireita.href = '#id5';
 	setaEsquerda.href='#id0';
+	setaEsquerda.style.display = "none";
 } else{
 	setaDireita.style.display = setaEsquerda.style.display = 'none';
 }
