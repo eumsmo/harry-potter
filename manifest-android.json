@@ -3,7 +3,7 @@
 	"name": "Harry Potter",
 	"icons": [
 	 {
-    	"src": "src/img/hallows-icon.png",
+    	"src": "src/icons/reliquias-icon.png",
     	"type": "image/png",
     	"sizes": "256x256"
   	}],
