@@ -31,7 +31,7 @@ body{
   text-align: center;
   position: relative;
 
-  box-sizing: border-box; 
+  box-sizing: border-box;
   overflow: hidden;
 
   /* Para animação */
@@ -43,17 +43,17 @@ body{
   position: absolute;
   top: 0;
   left: 0;
-  
+
   width: 100%;
   height: 100%;
   content: '';
-  
+
   background-color: rgba(0,0,0, 25%);
   opacity: 0;
   transition: opacity .5s ease;
 }
 
-/* Efeito de escurece aparece caso mouse esteja em cima e 
+/* Efeito de escurece aparece caso mouse esteja em cima e
  * nenhuma informação esteja sendo mostrada no elemento
  */
 .menu-icone:not(.ativo):hover::before{
@@ -66,7 +66,7 @@ body{
   top: 0;
   left: 0;
   z-index:  -1;
-  
+
   transition: 1s ease;
   filter: brightness(80%);
   height: 100%;
@@ -188,7 +188,7 @@ body{
   transition: top 1s ease;
   filter: brightness(75%);
 
-  
+
   width: 100%;
   height: 100%;
 
@@ -258,11 +258,11 @@ body{
 }
 
 .informacao li b{
-  font-size: 1.2em; 
+  font-size: 1.2em;
 }
 
 .citacao{
-  clear: both; 
+  clear: both;
   text-align: center;
   margin-bottom: 0;
 }
@@ -271,7 +271,7 @@ body{
   text-align: right;
   width: 75%;
   float: right;
-  clear: right; 
+  clear: right;
 
   margin-top: .5em;
 }
@@ -283,4 +283,21 @@ body{
 
 .fundo_offset{
   top: -50% !important;
+}
+
+#fundo-isabella{
+  top: -64% !important;
+}
+
+#fundo-juan{
+  top: -80% !important;
+}
+
+#voltar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 1em;
+  z-index: 999999;
+  width: 70%;
 }
